@@ -1,0 +1,2534 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "small_model": "omni-router/omni/deepseek-v4-flash",
+  "provider": {
+    "devwservices": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "{env:DEVWORLD_API_BASE_URL}/v1",
+        "apiKey": "{env:DEVWORLD_API_KEY}",
+      },
+      "models": {
+        "devworld/claude-fable-5-t": {
+          "id": "devworld/claude-fable-5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "anthropicFamilyTier": "fable",
+          "isFamilyDefault": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-fable",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 51,
+          "credits_per_mtok_output": 255,
+          "credits_per_mtok_cache_read": 5,
+          "credits_per_mtok_cache_write": 102,
+          "name": "[TOK] Claude Fable 5 ($51/$255 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/claude-haiku-4-5-t": {
+          "id": "devworld/claude-haiku-4-5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "anthropicFamilyTier": "haiku",
+          "isFamilyDefault": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-haiku",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 5.1,
+          "credits_per_mtok_output": 25.5,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 10.2,
+          "name": "[TOK] Claude Haiku 4.5 ($5.1/$25.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/claude-opus-5-r": {
+          "id": "devworld/claude-opus-5-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "anthropicFamilyTier": "opus",
+          "isFamilyDefault": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Opus 5 ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/claude-opus-5-t": {
+          "id": "devworld/claude-opus-5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "anthropicFamilyTier": "opus",
+          "isFamilyDefault": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 25.5,
+          "credits_per_mtok_output": 128,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 51,
+          "name": "[TOK] Claude Opus 5 ($25.5/$128 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/claude-sonnet-5-r": {
+          "id": "devworld/claude-sonnet-5-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "anthropicFamilyTier": "sonnet",
+          "isFamilyDefault": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Sonnet 5 ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/claude-sonnet-5-t": {
+          "id": "devworld/claude-sonnet-5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "anthropicFamilyTier": "sonnet",
+          "isFamilyDefault": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 15,
+          "credits_per_mtok_output": 76.5,
+          "credits_per_mtok_cache_read": 1.5,
+          "credits_per_mtok_cache_write": 30.5,
+          "name": "[TOK] Claude Sonnet 5 ($15/$76.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/deepseek-v4-flash-r": {
+          "id": "devworld/deepseek-v4-flash-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "deepseek-v4",
+          "vendor": "DeepSeek",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_request": 0.25,
+          "request_price_factor": 0.5,
+          "name": "[REQ] DeepSeek V4 Flash ($0.25/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/deepseek-v4-pro-r": {
+          "id": "devworld/deepseek-v4-pro-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "deepseek-v4",
+          "vendor": "DeepSeek",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_request": 0.5,
+          "request_price_factor": 1,
+          "name": "[REQ] DeepSeek V4 Pro ($0.5/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/deepseek-v4-pro-t": {
+          "id": "devworld/deepseek-v4-pro-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "deepseek-v4",
+          "vendor": "DeepSeek",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_mtok_input": 9,
+          "credits_per_mtok_output": 18,
+          "credits_per_mtok_cache_read": 0.02,
+          "credits_per_mtok_cache_write": 9,
+          "name": "[TOK] DeepSeek V4 Pro ($9/$18 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/glm-5.2-r": {
+          "id": "devworld/glm-5.2-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "glm",
+          "vendor": "GLM",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_request": 0.5,
+          "request_price_factor": 1,
+          "name": "[REQ] GLM 5.2 ($0.5/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/gpt-5.6-luna-t": {
+          "id": "devworld/gpt-5.6-luna-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 5,
+          "credits_per_mtok_output": 30,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 6.5,
+          "name": "[TOK] GPT 5.6 Luna ($5/$30 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/gpt-5.6-sol-t": {
+          "id": "devworld/gpt-5.6-sol-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 26,
+          "credits_per_mtok_output": 155,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 32,
+          "name": "[TOK] GPT 5.6 Sol ($26/$155 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/gpt-5.6-terra-t": {
+          "id": "devworld/gpt-5.6-terra-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 13,
+          "credits_per_mtok_output": 77,
+          "credits_per_mtok_cache_read": 1.5,
+          "credits_per_mtok_cache_write": 16,
+          "name": "[TOK] GPT 5.6 Terra ($13/$77 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/gpt-image-2-c": {
+          "id": "devworld/gpt-image-2-c",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "gpt-image",
+          "vendor": "OpenAI",
+          "endpoint_types": ["images.generations", "images.edits"],
+          "credits_per_request": 1,
+          "request_price_factor": 2,
+          "max_images_per_request": 1,
+          "name": "[REQ] GPT Image 2 C ($1/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "devworld/grok-4.5-t": {
+          "id": "devworld/grok-4.5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "grok",
+          "vendor": "xAI",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_mtok_input": 10,
+          "credits_per_mtok_output": 30,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 10,
+          "name": "[TOK] Grok 4.5 ($10/$30 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--g-p-t-5.6-luna-t": {
+          "id": "anthropic/gateway/devworld--g-p-t-5.6-luna-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 5,
+          "credits_per_mtok_output": 30,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 6.5,
+          "name": "[TOK] GPT 5.6 Luna ($5/$30 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--g-p-t-5.6-terra-t": {
+          "id": "anthropic/gateway/devworld--g-p-t-5.6-terra-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 13,
+          "credits_per_mtok_output": 77,
+          "credits_per_mtok_cache_read": 1.5,
+          "credits_per_mtok_cache_write": 16,
+          "name": "[TOK] GPT 5.6 Terra ($13/$77 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--g-p-t-5.6-sol-t": {
+          "id": "anthropic/gateway/devworld--g-p-t-5.6-sol-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "gpt-5.6",
+          "vendor": "OpenAI",
+          "endpoint_types": ["chat.completions", "responses"],
+          "credits_per_mtok_input": 26,
+          "credits_per_mtok_output": 155,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 32,
+          "name": "[TOK] GPT 5.6 Sol ($26/$155 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-fable-5[1m]": {
+          "id": "claude-fable-5[1m]",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-fable",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 51,
+          "credits_per_mtok_output": 255,
+          "credits_per_mtok_cache_read": 5,
+          "credits_per_mtok_cache_write": 102,
+          "name": "[TOK] Claude Fable 5 (1M context) ($51/$255 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--fable-5": {
+          "id": "anthropic/gateway/devworld--fable-5",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-fable",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 51,
+          "credits_per_mtok_output": 255,
+          "credits_per_mtok_cache_read": 5,
+          "credits_per_mtok_cache_write": 102,
+          "name": "[TOK] Claude Fable 5 (MCP) ($51/$255 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-opus-5[1m]": {
+          "id": "claude-opus-5[1m]",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 25.5,
+          "credits_per_mtok_output": 128,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 51,
+          "name": "[TOK] Claude Opus 5 (1M context) ($25.5/$128 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--opus-5": {
+          "id": "anthropic/gateway/devworld--opus-5",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 25.5,
+          "credits_per_mtok_output": 128,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 51,
+          "name": "[TOK] Claude Opus 5 (MCP) ($25.5/$128 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-sonnet-5[1m]": {
+          "id": "claude-sonnet-5[1m]",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 15,
+          "credits_per_mtok_output": 76.5,
+          "credits_per_mtok_cache_read": 1.5,
+          "credits_per_mtok_cache_write": 30.5,
+          "name": "[TOK] Claude Sonnet 5 (1M context) ($15/$76.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--sonnet-5": {
+          "id": "anthropic/gateway/devworld--sonnet-5",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 15,
+          "credits_per_mtok_output": 76.5,
+          "credits_per_mtok_cache_read": 1.5,
+          "credits_per_mtok_cache_write": 30.5,
+          "name": "[TOK] Claude Sonnet 5 (MCP) ($15/$76.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-haiku-4-5": {
+          "id": "claude-haiku-4-5",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-haiku",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 5.1,
+          "credits_per_mtok_output": 25.5,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 10.2,
+          "name": "[TOK] Claude Haiku 4.5 (1M context) ($5.1/$25.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--haiku-4-5": {
+          "id": "anthropic/gateway/devworld--haiku-4-5",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "claude-haiku",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_mtok_input": 5.1,
+          "credits_per_mtok_output": 25.5,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 10.2,
+          "name": "[TOK] Claude Haiku 4.5 (MCP) ($5.1/$25.5 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--gr0k-4.5-t": {
+          "id": "anthropic/gateway/devworld--gr0k-4.5-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "grok",
+          "vendor": "xAI",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_mtok_input": 10,
+          "credits_per_mtok_output": 30,
+          "credits_per_mtok_cache_read": 2.5,
+          "credits_per_mtok_cache_write": 10,
+          "name": "[TOK] Grok 4.5 ($10/$30 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--d33pseek-v4-pro-t": {
+          "id": "anthropic/gateway/devworld--d33pseek-v4-pro-t",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "family": "deepseek-v4",
+          "vendor": "DeepSeek",
+          "endpoint_types": ["chat.completions"],
+          "credits_per_mtok_input": 9,
+          "credits_per_mtok_output": 18,
+          "credits_per_mtok_cache_read": 0.02,
+          "credits_per_mtok_cache_write": 9,
+          "name": "[TOK] DeepSeek V4 Pro ($9/$18 MTok)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-opus-5-r[1m]": {
+          "id": "claude-opus-5-r[1m]",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Opus 5 (1M context) ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--opus-5-r": {
+          "id": "anthropic/gateway/devworld--opus-5-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-opus",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Opus 5 (MCP) ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "claude-sonnet-5-r[1m]": {
+          "id": "claude-sonnet-5-r[1m]",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Sonnet 5 (1M context) ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "anthropic/gateway/devworld--sonnet-5-r": {
+          "id": "anthropic/gateway/devworld--sonnet-5-r",
+          "object": "model",
+          "created": 1735689600,
+          "owned_by": "devworld",
+          "type": "model",
+          "created_at": "2025-01-01T00:00:00Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "billing_mode": "request",
+          "tags": ["R"],
+          "family": "claude-sonnet",
+          "vendor": "Anthropic",
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "credits_per_request": 0.75,
+          "request_price_factor": 1.5,
+          "name": "[REQ] Claude Sonnet 5 (MCP) ($0.75/request)",
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+      },
+    },
+    "omni-router": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "{env:OMNI_ROUTE_API_BASE_URL}/v1",
+        "apiKey": "{env:OMNI_ROUTE_API_KEY}",
+      },
+      "models": {
+        "omni/claude-fable-5": {
+          "id": "code-fable-5",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 400000,
+          "context_window_size": 400000,
+          "max_context_tokens": 400000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/claude-opus-5": {
+          "id": "code-opus-5",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 400000,
+          "context_window_size": 400000,
+          "max_context_tokens": 400000,
+          "max_input_tokens": null,
+          "input_token_limit": null,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/claude-opus-4.8": {
+          "id": "code-opus-4.8",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 400000,
+          "context_window_size": 400000,
+          "max_context_tokens": 400000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/claude-opus-free": {
+          "id": "code-opus-free",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 400000,
+          "context_window_size": 400000,
+          "max_context_tokens": 400000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/claude-sonnet-5": {
+          "id": "code-sonnet-5",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 400000,
+          "context_window_size": 400000,
+          "max_context_tokens": 400000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/claude-haiku-4-5": {
+          "id": "code-haiku-4.5",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "family": "claude-fable",
+          "vendor": "Anthropic",
+          "anthropicFamilyTier": "haiku",
+          "isFamilyDefault": true,
+          "billing_mode": "token",
+          "tags": ["T"],
+          "credits_per_mtok_input": 5.1,
+          "credits_per_mtok_output": 25.5,
+          "credits_per_mtok_cache_read": 0.5,
+          "credits_per_mtok_cache_write": 10.2,
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/deepseek-v4-pro": {
+          "id": "code-deepseek-v4-pro",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 128000,
+          "input_token_limit": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/deepseek-v4-flash": {
+          "id": "code-deepseek-v4-flash",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/alibaba-glm-5.2": {
+          "id": "code-glm-5.2",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/openai-5.6-luna": {
+          "id": "code-gpt-5.6-luna",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 1050000,
+          "input_token_limit": 1050000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/openai-5.6-sol": {
+          "id": "code-gpt-5.6-sol",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 1050000,
+          "input_token_limit": 1050000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/openai-5.6-terra": {
+          "id": "code-gpt-5.6-terra",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 1050000,
+          "input_token_limit": 1050000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/x-ai-grok-4-5": {
+          "id": "combo-grok-4.5",
+          "object": "model",
+          "created": 1785085740,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-07-26T17:09:00Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": null,
+          "input_token_limit": null,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/code-hy3": {
+          "id": "code-Hy3",
+          "object": "model",
+          "created": 1785639314,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-01T00:00:00Z",
+          "context_window": 256000,
+          "context_window_size": 256000,
+          "max_context_tokens": 256000,
+          "max_input_tokens": 256000,
+          "input_token_limit": 256000,
+          "max_output_tokens": 64000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/alibaba-glm-5.1": {
+          "id": "code-glm-5.1",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 32768,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/kimi-k3": {
+          "id": "code-kimi-k3",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1048576,
+          "context_window_size": 1048576,
+          "max_context_tokens": 1048576,
+          "max_input_tokens": 1048576,
+          "input_token_limit": 1048576,
+          "max_output_tokens": 131072,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/kimi-k2.7-code": {
+          "id": "code-Kimi-K2.7-Code",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 262144,
+          "context_window_size": 262144,
+          "max_context_tokens": 262144,
+          "max_input_tokens": 262144,
+          "input_token_limit": 262144,
+          "max_output_tokens": 262144,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/kimi-k2.6": {
+          "id": "code-Kimi-K2.6",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 262144,
+          "context_window_size": 262144,
+          "max_context_tokens": 262144,
+          "max_input_tokens": 262144,
+          "input_token_limit": 262144,
+          "max_output_tokens": 65536,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/mimo-v2.5": {
+          "id": "code-MiMo-V2.5",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 128000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/mimo-v2.5-pro": {
+          "id": "code-MiMo-V2.5-Pro",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1048576,
+          "context_window_size": 1048576,
+          "max_context_tokens": 1048576,
+          "max_input_tokens": 1048576,
+          "input_token_limit": 1048576,
+          "max_output_tokens": 128000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/minimax-m3": {
+          "id": "code-MiniMax-M3",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 131072,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/minimax-m2.7": {
+          "id": "code-MiniMax-M2.7",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 204800,
+          "context_window_size": 204800,
+          "max_context_tokens": 204800,
+          "max_input_tokens": 204800,
+          "input_token_limit": 204800,
+          "max_output_tokens": 131072,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/qwen3.7-max": {
+          "id": "code-Qwen3.7-Max",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/qwen3.7-plus": {
+          "id": "code-Qwen3.7-Plus",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 128000,
+          "context_window_size": 128000,
+          "max_context_tokens": 128000,
+          "max_input_tokens": 128000,
+          "input_token_limit": 128000,
+          "max_output_tokens": 65536,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/qwen3.6-plus": {
+          "id": "code-Qwen3.6-Plus",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 10000,
+  },
+  "plugin": [
+    "opencode-working-memory",
+    [
+      "@tokenwarden/opencode",
+      {
+        "maxToolOutputTokens": 2800,
+        "maxContextPartTokens": 2800,
+      },
+    ],
+    "opentmux",
+    "opencode-agent-tmux"
+  ],
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      ".git/**",
+      "dist/**",
+      "build/**",
+      ".next/**",
+      "coverage/**",
+      "*.lock",
+    ],
+  },
+  "permission": {
+    "bash": "allow",
+    "edit": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "**/secrets/**": "deny",
+      "**/credentials*": "deny",
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "**/secrets/**": "deny",
+      "**/credentials*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/id_rsa*": "deny",
+      "**/.ssh/**": "deny",
+      "**/service-account*.json": "deny",
+      "**/*.cred": "deny",
+    },
+    "grep": "allow",
+    "question": "allow",
+    "glob": "allow",
+    "lsp": "allow",
+    "skill": "allow",
+    "todowrite": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "external_directory": "ask",
+    "doom_loop": "ask",
+  },
+  "subagent_depth": 3,
+  "instructions": [
+    "~/.config/opencode/plugin/shell-strategy/shell_strategy.md",
+  ],
+  "default_agent": "build",
+}
