@@ -1,7 +1,7 @@
 ---
 description: Arquiteto. Design, tradeoffs, plano de implementação. Read-only em produção. Use em mudanças grandes; não use em fixes triviais.
 mode: subagent
-model: omni-router/omni/openai-5.6-sol
+model: omni-router/omni/openai-5.6-luna
 temperature: 0.2
 steps: 8
 color: "#8B5CF6"

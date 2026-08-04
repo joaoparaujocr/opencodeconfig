@@ -1,7 +1,7 @@
 ---
 description: Researcher read-only. Mapa codebase/docs com evidência. Não edita. Não implementa.
 mode: subagent
-model: opencode-go/qwen3.7-plus
+model: omni-router/omni/deepseek-v4-pro
 temperature: 0.2
 steps: 6
 color: "#06B6D4"

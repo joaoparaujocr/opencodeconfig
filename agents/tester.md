@@ -1,7 +1,7 @@
 ---
 description: Tester/QA. Escreve e roda testes, isola falhas de CI. Use quando comportamento muda; não use só para format/docs.
 mode: subagent
-model: opencode-go/glm-5.2
+model: omni-router/omni/deepseek-v4-pro
 temperature: 0.1
 steps: 10
 color: "#EAB308"
