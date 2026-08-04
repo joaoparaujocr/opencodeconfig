@@ -2474,8 +2474,8 @@
     [
       "@tokenwarden/opencode",
       {
-        "maxToolOutputTokens": 2800,
-        "maxContextPartTokens": 2800,
+        "maxToolOutputTokens": 5000,
+        "maxContextPartTokens": 5000,
       },
     ],
     "opentmux",
