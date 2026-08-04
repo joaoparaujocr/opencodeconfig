@@ -1,8 +1,6 @@
 {
   "plugin": [
-    "file:///home/joao/Documentos/Projetos/opencode-dw",
-    "@tarquinen/opencode-dcp@latest",
-    "@tokenwarden/opencode",
+    "file:///home/joao/Documentos/Projetos/opencode-dw"
   ],
   "keybinds": {
     "leader": "ctrl+x",

@@ -2488,13 +2488,6 @@
   },
   "plugin": [
     "opencode-working-memory",
-    [
-      "@tokenwarden/opencode",
-      {
-        "maxToolOutputTokens": 5000,
-        "maxContextPartTokens": 5000,
-      },
-    ],
     "opentmux",
     "opencode-agent-tmux"
   ],
