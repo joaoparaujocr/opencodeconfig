@@ -3,7 +3,7 @@ description: Arquiteto. Design, tradeoffs, plano de implementação. Read-only e
 mode: subagent
 model: omni-router/omni/deepseek-v4-pro
 temperature: 0.2
-steps: 8
+steps: 20
 color: "#8B5CF6"
 permission:
   skill:

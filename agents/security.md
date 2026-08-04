@@ -3,7 +3,7 @@ description: Security. Threat model, OWASP, authz, secrets. Risco real. Read-onl
 mode: subagent
 model: omni-router/omni/claude-haiku-4-5
 temperature: 0.1
-steps: 6
+steps: 16
 color: "#DC2626"
 permission:
   skill:

@@ -3,7 +3,7 @@ description: Backend Node/Nest/Postgres/Redis/API. Implementa só backend. Não 
 mode: subagent
 model: omni-router/omni/deepseek-v4-flash
 temperature: 0.1
-steps: 12
+steps: 28
 color: "#0EA5E9"
 permission:
   skill:

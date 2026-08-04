@@ -3,7 +3,7 @@ description: Code reviewer. Revisa diff/PR com severidade; não implementa. Use 
 mode: subagent
 model: omni-router/omni/claude-haiku-4-5
 temperature: 0.1
-steps: 6
+steps: 16
 color: "#F97316"
 permission:
   skill:

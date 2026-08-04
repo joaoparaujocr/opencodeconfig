@@ -3,7 +3,7 @@ description: Orquestrador do time. Classifica tarefa, SEMPRE delega a especialis
 mode: primary
 model: omni-router/omni/claude-sonnet-5
 temperature: 0.2
-steps: 10
+steps: 24
 color: "#6366F1"
 permission:
   skill:

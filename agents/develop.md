@@ -3,7 +3,7 @@ description: Desenvolvedor. Implementa features, fixes e refactors no código. D
 mode: subagent
 model: omni-router/omni/deepseek-v4-flash
 temperature: 0.15
-steps: 12
+steps: 28
 color: "#22C55E"
 permission:
   skill:
