@@ -1,7 +1,7 @@
 ---
 description: Backend Node/Nest/Postgres/Redis/API. Implementa só backend. Não faz frontend nem redesign amplo.
 mode: subagent
-model: omni-router/omni/kimi-k2.7-code
+model: omni-router/omni/deepseek-v4-flash
 temperature: 0.1
 steps: 12
 color: "#0EA5E9"

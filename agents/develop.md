@@ -1,7 +1,7 @@
 ---
 description: Desenvolvedor. Implementa features, fixes e refactors no código. Diff mínimo. Não redesenha arquitetura nem faz review formal.
 mode: subagent
-model: omni-router/omni/kimi-k2.7-code
+model: omni-router/omni/deepseek-v4-flash
 temperature: 0.15
 steps: 12
 color: "#22C55E"

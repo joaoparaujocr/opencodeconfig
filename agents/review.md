@@ -1,7 +1,7 @@
 ---
 description: Code reviewer. Revisa diff/PR com severidade; não implementa. Use com diff real; não use antes da mudança existir.
 mode: subagent
-model: omni-router/omni/claude-sonnet-5
+model: omni-router/omni/openai-5.6-luna
 temperature: 0.1
 steps: 6
 color: "#F97316"
