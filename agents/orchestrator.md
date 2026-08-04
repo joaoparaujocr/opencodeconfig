@@ -1,7 +1,7 @@
 ---
 description: Orquestrador do time. Classifica tarefa, usa mínimo de agentes, delega com brief claro e integra resultados. Não use para mudanças triviais (use build).
 mode: primary
-model: omni-router/omni/openai-5.6-luna
+model: omni-router/omni/claude-sonnet-5
 temperature: 0.2
 steps: 16
 color: "#6366F1"

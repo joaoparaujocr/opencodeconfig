@@ -1,7 +1,7 @@
 ---
 description: Security. Threat model, OWASP, authz, secrets. Risco real. Read-only por padrão. Não escreve exploits.
 mode: subagent
-model: omni-router/omni/openai-5.6-luna
+model: omni-router/omni/claude-haiku-4-5
 temperature: 0.1
 steps: 6
 color: "#DC2626"
