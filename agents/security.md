@@ -68,6 +68,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de segurança
+Reporte somente riscos com source/sink, path e evidência. `clean` significa que o escopo foi analisado, não que o sistema inteiro é seguro. Em contexto insuficiente, use `blocked` e declare a lacuna; não invente vulnerabilidades.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -150,6 +153,21 @@ Agents usados:
 - Exploits ou payloads ofensivos.
 - “Possível XSS” sem sink/source no código.
 - Segundo pass genérico após achar 0 issues reais — feche com clean.
+
+## Status de saída
+Inicie o resultado com `Status: done|partial|blocked|failed` e termine com `Próxima ação:`. Use `done` apenas quando o escopo do brief tiver sido efetivamente analisado.
+
+Formato mínimo:
+```text
+Status: done|partial|blocked|failed
+Resumo:
+Achados (severity + path:linha + evidência):
+Escopo analisado:
+Gaps:
+Mitigações:
+Próxima ação:
+Agents usados:
+```
 
 ## Controle de custo
 

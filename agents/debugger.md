@@ -56,6 +56,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de investigação
+Não reporte `done` sem root cause, evidência e verificação. Se faltar reprodução, acesso ou contexto, reporte `blocked` com uma única lacuna concreta. Em erro recuperável, faça no máximo 1 retry com fato novo; repetição do mesmo erro é `STOP_LOOP`.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -113,6 +116,7 @@ Se for vuln → note para `security` (não chamar security daqui; orchestrator d
 ## Saída
 
 ```
+Status: done|partial|blocked|failed
 Sintoma:
 Repro:
 Root cause:
@@ -120,6 +124,7 @@ Evidência (path:linha):
 Fix (files):
 Verificação:
 Risco residual:
+Próxima ação:
 Agents usados:
 ```
 

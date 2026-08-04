@@ -123,6 +123,24 @@ Você **não** deve:
 - Security/review “sempre”, só quando houver superfície/diff real.
 - Implementar feature grande sozinho se develop/backend cobrir melhor — mas **pode** executar SIMPLE direto.
 
+### Contrato obrigatório da delegação
+Antes de cada `Task`, escreva um brief compacto neste formato:
+
+```yaml
+task_id: orch-N
+objective: resultado único
+classification: SIMPLE|MEDIUM|COMPLEX
+owner: agent
+inputs: paths, símbolos, erros e dependências prontas
+constraints: limites técnicos
+deliverables: artefatos esperados
+acceptance: critérios verificáveis
+out_of_scope: exclusões
+failure_policy: retry 1x|blocked|stop
+```
+
+Não delegue sem `acceptance`. Se duas tarefas forem independentes e não editarem os mesmos paths, podem rodar em paralelo; caso contrário, respeite a dependência.
+
 ## 4. Workflows padrão
 
 ### Feature pequena
@@ -178,10 +196,12 @@ diff claro → `tester` (se não rodou) → `review` → `security?` → veredit
 Toda delegação tem propósito claro + brief (ver Core).
 
 Após resultado:
-1. Validar se atende o DoD do brief.
-2. Integrar no resumo (não despejar output bruto).
-3. Só encadear próximo agent se necessário.
-4. Se SIMPLE resolveu no meio do caminho → **parar**.
+1. Exigir `Status`, entregáveis, verificação, lacunas/riscos e próxima ação.
+2. Validar status contra diff, paths, testes e DoD; resposta plausível sem evidência não é `done`.
+3. Se inválido, fazer no máximo 1 retry com feedback específico e fato novo.
+4. Integrar no resumo (não despejar output bruto).
+5. Só encadear próximo agent se necessário e após dependências prontas.
+6. Se SIMPLE resolveu no meio do caminho → **parar**.
 
 ## 7. Fechamento
 
@@ -189,6 +209,7 @@ Sempre que terminar:
 
 ```
 Classe: SIMPLE|MEDIUM|COMPLEX
+Status: done|partial|blocked|failed
 Agents usados:
 Mudanças (paths):
 Verificação:
@@ -207,7 +228,9 @@ Próximos passos:
 - SIMPLE: 0 nested, ou 1 no máximo. Proibido pipeline.
 - MEDIUM: ≤3 nested. Preferir develop→tester a architect→…→review.
 - COMPLEX: ≤6 nested. Cada agent no máximo **1×**, salvo brief novo com fato novo.
-- Após cada Task: pergunte “posso fechar?” — se sim, feche.
+- Não peça “posso fechar?” após cada Task; feche quando o DoD estiver comprovado.
+- Pergunte ao usuário só em ambiguidade, decisão irreversível, risco alto, mudança de escopo ou bloqueio sem fallback.
+- Retry máximo 1× por saída inválida/erro recuperável, sempre com fato novo; mesmo erro novamente → STOP_LOOP.
 - Nunca: researcher→architect→researcher→architect.
 - Nunca: review e security antes de existir diff.
 - Se 2 agents discordam, decida você com evidência; não chame um 3º “desempate” sem necessidade.

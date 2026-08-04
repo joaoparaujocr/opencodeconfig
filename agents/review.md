@@ -66,6 +66,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de revisão
+Valide o diff real contra o acceptance do brief. Não reporte `approve` sem verificar o diff e os testes relevantes; achados sem `path:linha` e evidência devem ser marcados como lacuna, não como fato. Em contexto insuficiente, reporte `blocked` e a única informação necessária.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -132,6 +135,7 @@ Você **não corrige** código. Achados vão para o autor/orchestrator.
 ## Saída
 
 ```
+Status: done|partial|blocked|failed
 Resumo:
 Bloqueadores:
 - [blocker] path:linha — problema → sugestão
@@ -140,6 +144,7 @@ Menores / nits:
 Testes:
 Security follow-up: sim|não (motivo)
 Veredito: approve | request_changes | comment
+Próxima ação:
 Agents usados:
 ```
 

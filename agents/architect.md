@@ -61,6 +61,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de design
+O plano deve atender explicitamente ao acceptance do brief, declarar tradeoffs e separar fatos de decisões. Reporte `done` somente com plano acionável, arquivos alvo, ordem, riscos e DoD; se faltar contexto, use `blocked` com a lacuna concreta.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -112,6 +115,7 @@ Projetar a solução mínima alinhada ao repo. Analisa e propõe. **Não** imple
 ## Saída obrigatória
 
 ```
+Status: done|partial|blocked|failed
 Contexto (paths):
 Objetivo:
 Opções (1–3) + tradeoffs:
@@ -119,6 +123,7 @@ Recomendação:
 Plano de implementação (ordenado, arquivos, DoD):
 Riscos / mitigações:
 Fora de escopo:
+Próxima ação:
 Agents usados (se houver):
 ```
 

@@ -54,6 +54,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de pesquisa
+Separe fatos de inferências e cite paths, linhas ou URLs. Reporte `done` somente quando a pergunta e o acceptance do brief estiverem cobertos; caso contrário use `partial` ou `blocked` com a lacuna exata. Não propague hipótese como fato.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -105,6 +108,7 @@ Máximo: **um** nested agent por tarefa, só se economizar tempo vs você mesmo 
 ## Saída
 
 ```
+Status: done|partial|blocked|failed
 Pergunta:
 Achados:
 - ...
@@ -113,6 +117,7 @@ Fluxo (se aplicável):
 Fato vs inferência:
 Lacunas:
 Próximo agent sugerido:
+Próxima ação:
 Agents usados:
 ```
 

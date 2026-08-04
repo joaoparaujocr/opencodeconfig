@@ -60,6 +60,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de execução
+Trate o brief como contrato: confirme objetivo, paths, constraints, entregáveis e acceptance antes de editar. Ao terminar, reporte `Status: done|partial|blocked|failed`; só use `done` com evidência de todos os critérios. Em erro recuperável, faça no máximo 1 retry com fato novo; repetição do mesmo erro é `STOP_LOOP`.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -127,11 +130,13 @@ Não substitui o agent `security` em gate formal.
 ## Saída
 
 ```
+Status: done|partial|blocked|failed
 Assunções:
 Files:
 Comportamento/API:
 Verificação:
 Riscos:
+Próxima ação:
 Agents usados:
 ```
 

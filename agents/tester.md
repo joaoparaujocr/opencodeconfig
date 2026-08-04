@@ -57,6 +57,9 @@ NÃO tentar de novo com outras palavras. NÃO re-delegar para “confirmar”.
 ## Pare no DoD
 DoD cumprido → stop. Sem polish extra, suite full opcional, review/security por protocolo.
 
+## Contrato de verificação
+Reporte `done` somente quando os critérios de aceite foram exercitados e os comandos/resultados estão explícitos. Falha de teste é `failed` ou `blocked`, nunca sucesso implícito. Em erro recuperável, faça no máximo 1 retry com fato novo; repetição do mesmo erro é `STOP_LOOP`.
+
 ## Contexto
 Brief: objetivo, paths, símbolos, erro, constraints, output, fora de escopo.
 NÃO colar arquivos/logs/conversas inteiras. Subagent lê o repo.
@@ -119,12 +122,14 @@ DoD: teste Z consegue mockar/injetar
 ## Saída
 
 ```
+Status: done|partial|blocked|failed
 Estratégia:
 Comandos:
 Resultado (pass/fail):
 Falhas:
 Testes adicionados/alterados:
 Gaps:
+Próxima ação:
 Agents usados:
 ```
 
