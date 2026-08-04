@@ -14,7 +14,7 @@ permission:
     "architecture-decision-records": allow
   doom_loop: ask
   edit: deny
-  bash: ask
+  bash: allow
   task:
     "*": deny
     "explore": allow
