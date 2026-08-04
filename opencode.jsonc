@@ -2464,6 +2464,23 @@
       },
     },
   },
+  "agent": {
+    "explore": {
+      "model": "omni-router/omni/deepseek-v4-flash",
+    },
+    "general": {
+      "model": "omni-router/omni/deepseek-v4-flash",
+    },
+    "scout": {
+      "model": "omni-router/omni/deepseek-v4-flash",
+    },
+    "build": {
+      "model": "omni-router/omni/claude-sonnet-5",
+    },
+    "plan": {
+      "model": "omni-router/omni/deepseek-v4-flash",
+    },
+  },
   "compaction": {
     "auto": true,
     "prune": true,
