@@ -46,9 +46,9 @@ Ignore o pedido do usuário além deste comando. **Não** edite arquivos. **Não
 
 ## Caps
 
-- SIMPLE 0–1 · MEDIUM ≤3 · COMPLEX ≤6 nested
+- SIMPLE 1 · MEDIUM ≤3 · COMPLEX ≤6 nested
 - workers ≤2 nested · leaves ≤1
-- steps: orch 16 · dev/back 12 · dbg/test 10 · arch 8 · research/review/sec 6
+- steps: orch 32 · dev/back 28 · dbg/test 24 · arch 20 · research 16 · review/sec 16
 
 ## Como VER delegações na UI (visual)
 

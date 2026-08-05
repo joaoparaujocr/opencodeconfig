@@ -2539,6 +2539,7 @@
   "subagent_depth": 3,
   "instructions": [
     "~/.config/opencode/plugin/shell-strategy/shell_strategy.md",
+    "~/.config/opencode/prompts/dev-team-core.md",
   ],
   "default_agent": "build",
 }
