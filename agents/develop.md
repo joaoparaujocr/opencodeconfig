@@ -17,6 +17,7 @@ permission:
     "api-design": allow
     "deployment-patterns": allow
     "docker-patterns": allow
+    "graphify": allow
   doom_loop: ask
   edit: allow
   bash: allow

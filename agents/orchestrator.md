@@ -1,7 +1,7 @@
 ---
 description: Orquestrador do time. Classifica tarefa, SEMPRE delega a especialistas via Task, integra resultados. Nunca implementa sozinho.
 mode: primary
-model: omni-router/omni/claude-sonnet-5
+model: omni-router/omni/x-ai-grok-4-5
 temperature: 0.2
 color: "#6366F1"
 permission:

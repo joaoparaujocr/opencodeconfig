@@ -13,6 +13,7 @@ permission:
     "documentation-lookup": allow
     "backend-patterns": allow
     "docker-patterns": allow
+    "graphify": allow
   doom_loop: ask
   edit: allow
   bash: allow

@@ -13,6 +13,7 @@ permission:
     "documentation-lookup": allow
     "tdd-workflow": allow
     "e2e-testing": allow
+    "graphify": allow
   doom_loop: ask
   edit: allow
   bash: allow

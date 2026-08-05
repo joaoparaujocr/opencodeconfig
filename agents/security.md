@@ -12,6 +12,7 @@ permission:
     "documentation-lookup": allow
     "security-review": allow
     "security-scan": allow
+    "graphify": allow
   doom_loop: ask
   edit: deny
   bash:

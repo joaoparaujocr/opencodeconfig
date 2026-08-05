@@ -17,6 +17,7 @@ permission:
     "api-design": allow
     "architecture-decision-records": allow
     "security-review": allow
+    "graphify": allow
   doom_loop: ask
   edit: deny
   bash: ask

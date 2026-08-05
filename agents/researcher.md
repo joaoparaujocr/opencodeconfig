@@ -11,6 +11,7 @@ permission:
     "documentation-lookup": allow
     "codebase-onboarding": allow
     "architecture-decision-records": allow
+    "graphify": allow
   doom_loop: ask
   edit: deny
   bash: allow
