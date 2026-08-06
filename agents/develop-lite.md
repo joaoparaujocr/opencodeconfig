@@ -4,7 +4,7 @@ mode: subagent
 model: omni-router/omni/deepseek-v4-flash
 variant: low
 temperature: 0.1
-steps: 20
+steps: 56
 color: "#86EFAC"
 permission:
   skill:

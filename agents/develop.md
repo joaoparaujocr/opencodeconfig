@@ -4,7 +4,7 @@ mode: subagent
 model: omni-router/omni/deepseek-v4-pro
 variant: max
 temperature: 0.15
-steps: 28
+steps: 56
 color: "#22C55E"
 permission:
   skill:
