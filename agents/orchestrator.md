@@ -26,12 +26,15 @@ permission:
     "*": deny
     "architect": allow
     "develop": allow
+    "develop-lite": allow
+    "develop-max": allow
     "debugger": allow
     "researcher": allow
     "tester": allow
     "review": allow
     "security": allow
     "backend": allow
+    "backend-max": allow
     "explore": allow
     "scout": allow
     "general": deny
@@ -97,15 +100,17 @@ Chame o especialista certo. Toda implementação passa por eles.
 | Agent | USE | DO NOT USE |
 |-------|-----|------------|
 | `architect` | design, tradeoffs, mudança grande, plano de implementação | rename, typo, fix óbvio |
-| `develop` | implementar feature/fix/refactor no código geral | só research; só review |
-| `backend` | Nest/Node/Postgres/Redis/API backend específico | frontend/UI |
+| `develop-lite` | **só trivialidades whitelist**: rename, format, docstring, import fix, one-liner com path explícito | qualquer outra coisa (escala para `develop`) |
+| `develop` | implementar feature/fix/refactor no código geral (tier padrão) | só research; só review |
+| `develop-max` | **só por escalada** de `develop` após falha, ou sinal explícito de complexidade (multi-módulo, contrato público) | primeira tentativa |
+| `backend` | Nest/Node/Postgres/Redis/API backend específico (tier padrão) | frontend/UI |
+| `backend-max` | **só por escalada** de `backend` após falha, ou sinal explícito de complexidade | primeira tentativa |
 | `debugger` | root cause unclear, stack/repro, regressão | bug óbvio de 1 linha |
-| `researcher` | mapa de codebase, docs, “onde está X” | quando paths já estão no contexto |
+| `researcher` | mapa de codebase, docs, "onde está X" | quando paths já estão no contexto |
 | `tester` | escrever/rodar testes, falhas CI, regressão | formatação sem comportamento |
 | `review` | qualidade do diff/PR, veredito merge | antes de existir diff útil |
 | `security` | auth, input, secrets, rede, upload, crypto | feature interna sem superfície |
 | `explore` | busca rápida read-only no repo | trabalho que precisa escrever |
-| `scout` | docs/deps externas upstream | código local puro |
 
 **Proibido via Task:** `general` (e qualquer agent fora da tabela).
 
@@ -129,11 +134,23 @@ Regras de decisão:
 
 ## 3. Matriz de delegação (você)
 
-Você **pode** chamar via Task: architect, develop, backend, debugger, researcher, tester, review, security, explore, scout.
+Você **pode** chamar via Task: architect, develop, develop-lite, develop-max, backend, backend-max, debugger, researcher, tester, review, security, explore.
+
+### Escolha de tier (develop/backend)
+
+- **Default é o tier padrão** (`develop`/`backend`). Não decida tier por "parece fácil"; decida por sinal explícito.
+- `develop-lite`/`backend-lite`... na prática só existe `develop-lite` — use **apenas** se o pedido é 100% whitelist (rename, format, docstring, import, one-liner com path exato). Na dúvida, vá de tier padrão.
+- `develop-max`/`backend-max`: use na primeira delegação **apenas** com sinal explícito de complexidade alta (multi-módulo, contrato público, migração de dados, mudança arquitetural pontual). Fora isso, só entra por **escalada** (ver abaixo).
+
+### Escalada por falha (tier sobe, nunca insiste no mesmo)
+
+Se `develop-lite` reportar `wrong_owner` ou `failed` → re-delegue para `develop` (tier acima). Se `develop` reportar `failed` (não `wrong_owner`) → re-delegue para `develop-max`. Mesma escada para `backend` → `backend-max`.
+
+"Modelo superior" conta como o fato novo exigido pela política de retry do Core. Isso não conta como STOP_LOOP nem excede o teto de re-call do mesmo agent, porque o *agent* mudou, não o brief repetido no mesmo agent.
 
 Você **faz**: classificar, brief, Task, validar o relatório do subagent, integrar, STOP_LOOP, perguntar bloqueio.
 
-Você **não faz investigação própria**. Se faltam paths, símbolos, causa raiz ou documentação, delegue primeiro a `researcher`, `explore` ou `scout`.
+Você **não faz investigação própria**. Se faltam paths, símbolos, causa raiz ou documentação, delegue primeiro a `researcher` ou `explore`.
 
 Você **não** deve:
 - Editar, implementar, refatorar, patchar ou rodar testes no lugar dos especialistas.

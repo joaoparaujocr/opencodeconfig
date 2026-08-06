@@ -64,6 +64,9 @@ Regra por papel, sem ambiguidade:
 - Orchestrator re-delegando ao mesmo agent: **≤2**, sempre com fato novo no brief.
 - Mesmo erro após o retry permitido → `STOP_LOOP`. Nunca "tentar de novo com outras palavras".
 
+## Escalada de tier (agents com variação de modelo)
+Alguns agents têm variações por modelo (ex.: `develop-lite`/`develop`/`develop-max`). Falha em um tier **não retenta no mesmo tier**: sobe um degrau. "Modelo superior" conta como o fato novo exigido pela política de retry acima — não é "tentar de novo com outras palavras". Subir de tier após falha não conta como STOP_LOOP nem como re-call do mesmo agent, porque o agent mudou. Default é sempre o tier padrão; tier baixo só por whitelist explícita do agent, tier alto só por sinal explícito de complexidade ou por escalada.
+
 ## Anti-loop → pare e responda STOP_LOOP
 1. Mesma tool+args 2× sem dado novo
 2. Mesmo arquivo 3× sem hipótese nova

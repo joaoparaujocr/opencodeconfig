@@ -1,11 +1,11 @@
 ---
-description: Backend Node/Nest/Postgres/Redis/API. Implementa só backend. Não faz frontend nem redesign amplo.
+description: Backend máximo. Só por escalada de backend após falha, ou complexidade explícita (multi-módulo, contrato público).
 mode: subagent
-model: omni-router/omni/deepseek-v4-pro
+model: omni-router/omni/x-ai-grok-4-5
 variant: max
 temperature: 0.1
 steps: 28
-color: "#0EA5E9"
+color: "#0369A1"
 permission:
   skill:
     "*": deny

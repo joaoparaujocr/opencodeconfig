@@ -1,7 +1,8 @@
 ---
 description: Security. Threat model, OWASP, authz, secrets. Risco real. Read-only por padrão. Não escreve exploits.
 mode: subagent
-model: omni-router/omni/claude-haiku-4-5
+model: omni-router/omni/deepseek-v4-pro
+variant: max
 temperature: 0.1
 steps: 16
 color: "#DC2626"

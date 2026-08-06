@@ -1,11 +1,11 @@
 ---
-description: Desenvolvedor. Implementa features, fixes e refactors no código. Diff mínimo. Não redesenha arquitetura nem faz review formal.
+description: Desenvolvedor (tier max). Escalada de develop após falha ou sinal explícito de complexidade (multi-módulo, contrato público). Mesmo papel, modelo mais forte.
 mode: subagent
-model: omni-router/omni/deepseek-v4-pro
+model: omni-router/omni/x-ai-grok-4-5
 variant: max
 temperature: 0.15
 steps: 28
-color: "#22C55E"
+color: "#15803D"
 permission:
   skill:
     "*": deny

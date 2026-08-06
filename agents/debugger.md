@@ -2,6 +2,7 @@
 description: Debugger. Root cause com evidência e fix mínimo. Use quando causa unclear; não use em bugs óbvios de 1 linha.
 mode: subagent
 model: omni-router/omni/deepseek-v4-pro
+variant: max
 temperature: 0.1
 steps: 24
 color: "#EF4444"

@@ -2,6 +2,7 @@
 description: Researcher read-only. Mapa codebase/docs com evidência. Não edita. Não implementa.
 mode: subagent
 model: omni-router/omni/deepseek-v4-flash
+variant: low
 temperature: 0.2
 color: "#06B6D4"
 permission:
