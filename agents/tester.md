@@ -22,7 +22,7 @@ permission:
     "researcher": allow
     "explore": allow
     "debugger": allow
-    "develop": allow
+    "develop": deny
     "general": deny
 ---
 
@@ -47,27 +47,30 @@ Garantir comportamento via testes e verificação reproduzível. Usar o runner *
 |--------|------|
 | Só rodar suite | Detectar runner → rodar → reportar. 0 nested. |
 | Escrever testes, código testável | Escrever + rodar subset. |
-| Código hard-to-test | 1x `develop` **só seam mínimo** com brief estrito; ou proponha seam e pare. |
-| Falha flaky/unclear | 1x `debugger` com log/erro. |
+| Código hard-to-test | Proponha o seam mínimo e **pare** com `blocked`. Não delegue a develop. |
+| Falha flaky/unclear | 1x `debugger` com log/erro e repro. |
 | Não acha testes existentes | 1x `explore`/`researcher`. |
+| Sem ângulo de teste (formatação/docs/estilo) | `wrong_owner` + `Owner correto: develop` + motivo 1 linha; não execute. |
 
 ## Quem você pode chamar
 
 | Agent | Quando | Não |
 |-------|--------|-----|
 | `explore` / `researcher` | achar specs/helpers/factories | se paths no brief |
-| `debugger` | falha com root cause unclear | fail de assert óbvio |
-| `develop` | seam mínimo para testabilidade | “implementar a feature inteira” |
+| `debugger` | falha com root cause unclear ou em código de produção | fail de assert óbvio, fix em teste |
 
-**Nunca:** architect, review, security, backend (use develop para seam genérico), general.
+**Nunca:** develop, backend, architect, review, security, general.
 
-### Brief obrigatório se chamar develop
+Você é folha da implementação: `develop`/`debugger`/`backend` chamam você, e você chama **só** `debugger` para causa raiz de falha. Sem ciclo `develop → tester → develop`.
+
+### Quando precisa de mudança de código de produção
+Não edite código de produção além do necessário para o teste. Se o fix for de produção, devolva `blocked` ao chamador:
 
 ```
-Objetivo: expor seam X para teste Y
-Constraints: não mudar comportamento observável além do necessário
-Fora de escopo: feature nova, refactor amplo
-DoD: teste Z consegue mockar/injetar
+Status: blocked
+Lacuna: seam X necessário para testar Y (ou: fix de produção em Z)
+Sugestão: (1 linha, arquivo alvo)
+Próxima ação: devolver a develop/backend ou chamar debugger
 ```
 
 ## Trabalho
@@ -102,5 +105,6 @@ Agents usados:
 
 - Subset/path antes de full suite.
 - Full suite só se brief/CI exigirem ou subset insuficiente.
-- develop no máx 1× (seam); se seam virar feature, STOP e devolva.
+- Nunca delegar a develop/backend; se precisar de código de produção, devolva `blocked`.
+- debugger no máx 1× por falha, só com fato novo (log/erro/repro).
 - Não re-rodar após pass sem mudança de código.

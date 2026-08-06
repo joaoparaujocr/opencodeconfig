@@ -25,14 +25,19 @@ Não cole arquivos, logs ou conversas inteiras no brief. Passe paths, símbolos 
 ```text
 queued -> assigned -> running -> verifying -> done
                                -> partial
+                               -> wrong_owner
                                -> blocked
                                -> failed
 ```
 
 - `done`: todos os critérios de aceite têm evidência.
 - `partial`: parte entregável pronta, algum critério pendente.
+- `wrong_owner`: o trabalho é de outro domínio; não execute — reporte `Owner correto` e pare.
 - `blocked`: falta input, permissão ou decisão externa; não invente solução.
 - `failed`: a abordagem foi executada e não produziu o resultado esperado.
+
+## Escalada de roteamento (wrong_owner)
+Recebeu trabalho fora do seu domínio (ex.: backend recebeu frontend, develop recebeu backend puro)? **Não execute e não bloqueie**: reporte `Status: wrong_owner` + `Owner correto: <agent>` + motivo de 1 linha, e pare. O orchestrator re-roteia sem contar como retry — foi correção de rota, não falha.
 
 ## Regra de ouro
 Mínimo de agents e tool calls. `1 agent certo → 1 resultado` > pipeline de 7.
@@ -88,7 +93,7 @@ Saída vaga ou malformada: ≤1 retry com feedback específico. Não propague sa
 
 ## Formato mínimo de saída
 ```text
-Status: done|partial|blocked|failed
+Status: done|partial|wrong_owner|blocked|failed
 Resumo:
 Entregáveis/files:
 Verificação (comandos + resultado):
@@ -96,6 +101,8 @@ Lacunas/riscos:
 Próxima ação:
 Agents usados:
 ```
+
+Em `wrong_owner`, substitua os campos por: `Owner correto: <agent>` + `Motivo: <1 linha>`. Nenhum outro campo é obrigatório nesse caso.
 
 `Próxima ação: stop` quando o DoD estiver completo. `blocked` e `failed` indicam uma única ação recuperável ou o motivo para escalar.
 

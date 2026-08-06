@@ -56,6 +56,7 @@ Node.js, TypeScript, NestJS, Express, Fastify, PostgreSQL, Redis, Prisma/TypeORM
 | Precisa mapa de módulos | 1x explore/researcher. |
 | Falha unclear | debugger ou self-debug. |
 | Comportamento mudou | tester com escopo API/casos. |
+| Escopo frontend/UI ou fora do backend | `wrong_owner` + `Owner correto: develop` + motivo 1 linha; não execute. Redesign amplo → `wrong_owner: architect`. |
 
 ## Quem você pode chamar
 

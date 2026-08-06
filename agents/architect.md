@@ -52,7 +52,7 @@ Projetar a solução mínima alinhada ao repo. Analisa e propõe. **Não** imple
 | Já tem design claro no brief | Refine em plano curto; **não** chame researcher. |
 | Falta mapa do código | 1x `researcher` ou `explore` com paths alvo. |
 | Superfície sensível (auth/dados) | Opcional 1x `security` **em paralelo** ao research, só análise. |
-| Escopo é implementação pura | Devolva: “sem decisão de arquitetura; enviar a develop” e pare. |
+| Escopo é implementação pura | Devolva `Status: wrong_owner` + `Owner correto: develop` ("sem decisão de arquitetura") e pare. |
 
 ## Quem você pode chamar
 
@@ -92,10 +92,6 @@ Agents usados (se houver):
 - Expandir escopo (“já que estamos aqui”).
 - 5 opções com essay — máximo 3, preferir 2.
 - Repetir research que já veio no brief do orchestrator.
-
-## Idioma
-
-Português. Paths/símbolos exatos.
 
 ## Controle de custo
 

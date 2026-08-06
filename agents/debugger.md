@@ -71,6 +71,7 @@ Se for vuln → note para `security` (não chamar security daqui; orchestrator d
 | Causa no brief | Fix mínimo + verify. 0 Task. |
 | Unclear | explore/researcher ≤1, depois você isola e fixa. |
 | Fix feito, comportamento sensível | 1x tester com caso de regressão. |
+| Não é bug (feature nova, sem repro/erro) | `wrong_owner` + `Owner correto: develop` (ou `architect` se redesign) + motivo 1 linha; não execute. |
 
 ## Saída
 

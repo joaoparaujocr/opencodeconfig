@@ -16,6 +16,8 @@ Classifique:
 
 Regras:
 - Não chamar debugger se a causa já está no report.
+- Sem stack trace/repro no pedido → envie a `debugger` com o sintoma; ele decide repro.
+- `wrong_owner` não queima retry: re-roteie para o owner indicado.
 - Não refactor fora do fix.
 - 1 brief objetivo por agent.
 - Não repetir a mesma investigação.

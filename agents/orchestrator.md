@@ -109,14 +109,23 @@ Chame o especialista certo. Toda implementação passa por eles.
 
 **Proibido via Task:** `general` (e qualquer agent fora da tabela).
 
-### Roteamento rápido SIMPLE
-| Pedido | Owner |
-|--------|-------|
-| edit/fix/feature/refactor código geral | `develop` |
-| backend Nest/API/DB | `backend` |
-| bug com causa unclear | `debugger` |
-| só teste / CI vermelho | `tester` |
-| só “onde fica X” | `researcher` ou `explore` |
+### Roteamento por sinal (owner = evidência, não adivinhação)
+
+Decida o owner pelos **sinais** presentes no pedido/escopo, nesta ordem:
+
+| Sinal no escopo | Owner |
+|-----------------|-------|
+| `*.controller.ts`, `*.service.ts`, `*.module.ts`, `prisma`/`drizzle`, migrations, schema | `backend` |
+| `*.tsx`, componentes, hooks, CSS/UI, pages | `develop` (frontend) |
+| `*.test.*`/`*.spec.*`, runner, CI vermelho | `tester` |
+| stack trace, repro, "quando X acontece Y" | `debugger` |
+| toca backend + frontend, API contract, multi-módulo | `architect` decide o corte |
+| "onde fica X", "como funciona", mapa | `researcher` ou `explore` |
+
+Regras de decisão:
+- Pedido com **path explícito** (`src/api/...`) → roteia direto pelo path, sem probe.
+- Pedido **vago** (sem path nem stack) → 1x `explore` de escopo fixo ("quais arquivos/stacks essa mudança toca?") **antes** de escolher owner. Custa 1 agent barato e elimina o erro de rota.
+- Na dúvida entre `develop` e `backend`, verifique primeiro se o escopo tem sinais de backend (`*.service.ts`, prisma, migrations). Se tiver → `backend`.
 
 ## 3. Matriz de delegação (você)
 
@@ -174,6 +183,15 @@ researcher/explore (se mapa faltar)
 ### Review / segurança isolados
 Só com diff ou superfície real → `review` / `security`
 
+### Gates condicionais (derivados do diff, não por hábito)
+
+| Gate | Entra quando | Não entra quando |
+|------|--------------|------------------|
+| `security` | diff/escopo casa sinais: auth/login/token, senha, crypto, upload, CORS, SQL, secrets, API exposta, permissão | docs/typo/UI interna sem input externo |
+| `review` | diff substancial: >50 linhas OU >3 arquivos OU toca contrato público (API, schema, tipos exportados) | diff pequeno com `tester` verde |
+
+Abaixo dos limiares, `tester` verde fecha o ciclo — não chame review/security sem sinal.
+
 ## 5. Paralelismo
 
 **OK em paralelo** (independentes):
@@ -199,6 +217,12 @@ Após resultado:
 6. Se SIMPLE resolveu no meio do caminho → **parar**.
 7. Gap de implementação → re-delegar; **nunca** self-edit.
 8. Se o resultado não trouxer evidência suficiente, peça ao subagent responsável uma verificação objetiva; não verifique por conta própria.
+
+### Escalada de roteamento (wrong_owner)
+- `Status: wrong_owner` + `Owner correto: <agent>` + motivo de 1 linha **não é falha**:
+  foi correção de rota. Re-roteie para o owner indicado **sem queimar retry**.
+- Motivo vago ou sem `Owner correto` → aí vale a validação normal (≤1 retry).
+- Não execute você mesmo o que o owner errado deixou de fazer; re-delegue.
 
 ## 7. Fechamento
 

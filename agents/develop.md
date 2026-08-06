@@ -53,6 +53,7 @@ Escrever código de produção limpo, mínimo, consistente com o repo. Executar 
 | **MEDIUM** — precisa achar call sites | Opcional 1x `explore`/`researcher`, depois codar. |
 | **Unclear failure** ao rodar | 1x `debugger` **ou** debug você mesmo se repro trivial. |
 | **Comportamento mudou** | Opcional 1x `tester` no fim com escopo do que mudou. |
+| Brief de outro domínio (backend puro: `*.service.ts`, prisma, migrations; ou redesign) | `wrong_owner` + `Owner correto: backend` ou `architect` + motivo 1 linha; não execute. |
 
 ## Quem você pode chamar
 
