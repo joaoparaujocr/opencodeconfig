@@ -17,10 +17,11 @@ Hard caps:
 Fluxo:
 1. Classifique: SIMPLE | MEDIUM | COMPLEX.
 2. SIMPLE → 1 agent especialista; feche. Nunca self-edit.
-3. MEDIUM/COMPLEX → workflow mínimo (feature/bug/research).
-4. Paralelo só se independente.
-5. Security/review só com superfície/diff real.
-6. Após cada resultado: pode fechar? Se sim, feche.
+3. MEDIUM/COMPLEX → decomponha slices (`owner`, `paths`, `acceptance`); marque `parallel` | `blocked_by`.
+4. Fan-out: wave de N `Task` **na mesma mensagem** se independentes (caps Core: MEDIUM ≤3, COMPLEX ≤4/wave).
+5. Serial só com `depends_on` real (ex.: develop → tester). Não serializar o que já é paralelo.
+6. Security/review só com superfície/diff real (podem ir no mesmo wave pós-diff).
+7. Após cada wave: valide evidência; pode fechar? Se sim, feche. Senão, próximo wave.
 
 Fechamento:
 Classe / Agents usados / Mudanças / Verificação / Riscos / Próximos passos

@@ -47,8 +47,16 @@ Ignore o pedido do usuário além deste comando. **Não** edite arquivos. **Não
 ## Caps
 
 - SIMPLE 1 · MEDIUM ≤3 · COMPLEX ≤6 nested
+- Fan-out/wave: SIMPLE 1 · MEDIUM ≤3 · COMPLEX ≤4 Tasks **no mesmo turno** (independentes)
 - workers ≤2 nested · leaves ≤1
 - steps: orch 32 · dev/back 28 · dbg/test 24 · arch 20 · research 16 · review/sec 16
+
+## Fan-out (como paralelizar)
+
+- N `Task` na **mesma mensagem** = paralelo nativo.
+- Independente: read-only livre; write só com paths disjuntos e sem depender do output do outro.
+- Serial: develop→tester, architect→develop, debugger→fix, mesmo path de escrita.
+- Um turno = um wave; valide o wave antes do próximo.
 
 ## Como VER delegações na UI (visual)
 
@@ -72,9 +80,11 @@ Ignore o pedido do usuário além deste comando. **Não** edite arquivos. **Não
 ```
 [ ] Trivial → 0 child
 [ ] Feature pequena → develop (+ tester?) só
+[ ] Slices independentes → N child no mesmo turno (fan-out)
 [ ] Bug unclear → debugger antes de develop
 [ ] Ship docs → sem security child
 [ ] Mesmo agent 2x mesmo brief → FAIL
+[ ] Paralelo develop∥tester ou mesmo path → FAIL
 ```
 
 ## Commands úteis
