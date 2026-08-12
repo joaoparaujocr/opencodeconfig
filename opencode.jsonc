@@ -24,12 +24,23 @@
           "supports1m": true,
           "anthropicFamilyTier": "fable",
           "isFamilyDefault": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-fable",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 51,
           "credits_per_mtok_output": 255,
           "credits_per_mtok_cache_read": 5,
@@ -73,12 +84,23 @@
           "supports1m": false,
           "anthropicFamilyTier": "haiku",
           "isFamilyDefault": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-haiku",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 5.1,
           "credits_per_mtok_output": 25.5,
           "credits_per_mtok_cache_read": 0.5,
@@ -122,12 +144,23 @@
           "supports1m": true,
           "anthropicFamilyTier": "opus",
           "isFamilyDefault": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Opus 5 ($0.75/request)",
@@ -169,12 +202,23 @@
           "supports1m": true,
           "anthropicFamilyTier": "opus",
           "isFamilyDefault": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 25.5,
           "credits_per_mtok_output": 128,
           "credits_per_mtok_cache_read": 2.5,
@@ -218,12 +262,23 @@
           "supports1m": true,
           "anthropicFamilyTier": "sonnet",
           "isFamilyDefault": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Sonnet 5 ($0.75/request)",
@@ -265,12 +320,23 @@
           "supports1m": true,
           "anthropicFamilyTier": "sonnet",
           "isFamilyDefault": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 15,
           "credits_per_mtok_output": 76.5,
           "credits_per_mtok_cache_read": 1.5,
@@ -313,10 +379,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "deepseek-v4",
           "vendor": "DeepSeek",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_request": 0.25,
           "request_price_factor": 0.5,
           "name": "[REQ] DeepSeek V4 Flash ($0.25/request)",
@@ -357,10 +427,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "deepseek-v4",
           "vendor": "DeepSeek",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_request": 0.5,
           "request_price_factor": 1,
           "name": "[REQ] DeepSeek V4 Pro ($0.5/request)",
@@ -401,10 +475,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "deepseek-v4",
           "vendor": "DeepSeek",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_mtok_input": 9,
           "credits_per_mtok_output": 18,
           "credits_per_mtok_cache_read": 0.02,
@@ -447,10 +525,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "glm",
           "vendor": "GLM",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_request": 0.5,
           "request_price_factor": 1,
           "name": "[REQ] GLM 5.2 ($0.5/request)",
@@ -491,10 +573,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 5,
           "credits_per_mtok_output": 30,
           "credits_per_mtok_cache_read": 0.5,
@@ -537,10 +624,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 26,
           "credits_per_mtok_output": 155,
           "credits_per_mtok_cache_read": 2.5,
@@ -583,10 +675,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 13,
           "credits_per_mtok_output": 77,
           "credits_per_mtok_cache_read": 1.5,
@@ -629,10 +726,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "gpt-image",
           "vendor": "OpenAI",
-          "endpoint_types": ["images.generations", "images.edits"],
+          "endpoint_types": [
+            "images.generations",
+            "images.edits"
+          ],
           "credits_per_request": 1,
           "request_price_factor": 2,
           "max_images_per_request": 1,
@@ -674,10 +776,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "grok",
           "vendor": "xAI",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_mtok_input": 10,
           "credits_per_mtok_output": 30,
           "credits_per_mtok_cache_read": 2.5,
@@ -720,10 +826,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 5,
           "credits_per_mtok_output": 30,
           "credits_per_mtok_cache_read": 0.5,
@@ -766,10 +877,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 13,
           "credits_per_mtok_output": 77,
           "credits_per_mtok_cache_read": 1.5,
@@ -812,10 +928,15 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "gpt-5.6",
           "vendor": "OpenAI",
-          "endpoint_types": ["chat.completions", "responses"],
+          "endpoint_types": [
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 26,
           "credits_per_mtok_output": 155,
           "credits_per_mtok_cache_read": 2.5,
@@ -858,10 +979,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-fable",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 51,
           "credits_per_mtok_output": 255,
           "credits_per_mtok_cache_read": 5,
@@ -904,10 +1031,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-fable",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 51,
           "credits_per_mtok_output": 255,
           "credits_per_mtok_cache_read": 5,
@@ -950,10 +1083,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 25.5,
           "credits_per_mtok_output": 128,
           "credits_per_mtok_cache_read": 2.5,
@@ -996,10 +1135,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 25.5,
           "credits_per_mtok_output": 128,
           "credits_per_mtok_cache_read": 2.5,
@@ -1042,10 +1187,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 15,
           "credits_per_mtok_output": 76.5,
           "credits_per_mtok_cache_read": 1.5,
@@ -1088,10 +1239,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 15,
           "credits_per_mtok_output": 76.5,
           "credits_per_mtok_cache_read": 1.5,
@@ -1134,10 +1291,16 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-haiku",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 5.1,
           "credits_per_mtok_output": 25.5,
           "credits_per_mtok_cache_read": 0.5,
@@ -1180,10 +1343,16 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "claude-haiku",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_mtok_input": 5.1,
           "credits_per_mtok_output": 25.5,
           "credits_per_mtok_cache_read": 0.5,
@@ -1226,10 +1395,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "grok",
           "vendor": "xAI",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_mtok_input": 10,
           "credits_per_mtok_output": 30,
           "credits_per_mtok_cache_read": 2.5,
@@ -1272,10 +1445,14 @@
           "input_token_limit": 200000,
           "supports1m": false,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "family": "deepseek-v4",
           "vendor": "DeepSeek",
-          "endpoint_types": ["chat.completions"],
+          "endpoint_types": [
+            "chat.completions"
+          ],
           "credits_per_mtok_input": 9,
           "credits_per_mtok_output": 18,
           "credits_per_mtok_cache_read": 0.02,
@@ -1318,10 +1495,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Opus 5 (1M context) ($0.75/request)",
@@ -1362,10 +1545,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-opus",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Opus 5 (MCP) ($0.75/request)",
@@ -1406,10 +1595,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Sonnet 5 (1M context) ($0.75/request)",
@@ -1450,10 +1645,16 @@
           "input_token_limit": 1000000,
           "supports1m": true,
           "billing_mode": "request",
-          "tags": ["R"],
+          "tags": [
+            "R"
+          ],
           "family": "claude-sonnet",
           "vendor": "Anthropic",
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "credits_per_request": 0.75,
           "request_price_factor": 1.5,
           "name": "[REQ] Claude Sonnet 5 (MCP) ($0.75/request)",
@@ -1502,8 +1703,17 @@
           "max_input_tokens": 1000000,
           "input_token_limit": 1000000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1540,8 +1750,17 @@
           "max_input_tokens": null,
           "input_token_limit": null,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1578,8 +1797,17 @@
           "max_input_tokens": 1000000,
           "input_token_limit": 1000000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1616,8 +1844,17 @@
           "max_input_tokens": 200000,
           "input_token_limit": 200000,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1654,8 +1891,17 @@
           "max_input_tokens": 1000000,
           "input_token_limit": 1000000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1692,14 +1938,25 @@
           "max_input_tokens": 200000,
           "input_token_limit": 200000,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "family": "claude-fable",
           "vendor": "Anthropic",
           "anthropicFamilyTier": "haiku",
           "isFamilyDefault": true,
           "billing_mode": "token",
-          "tags": ["T"],
+          "tags": [
+            "T"
+          ],
           "credits_per_mtok_input": 5.1,
           "credits_per_mtok_output": 25.5,
           "credits_per_mtok_cache_read": 0.5,
@@ -1740,8 +1997,17 @@
           "max_input_tokens": 128000,
           "input_token_limit": 128000,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1778,8 +2044,17 @@
           "max_input_tokens": 1000000,
           "input_token_limit": 1000000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1816,8 +2091,17 @@
           "max_input_tokens": 200000,
           "input_token_limit": 200000,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1854,8 +2138,17 @@
           "max_input_tokens": 1050000,
           "input_token_limit": 1050000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1892,8 +2185,17 @@
           "max_input_tokens": 1050000,
           "input_token_limit": 1050000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1930,8 +2232,17 @@
           "max_input_tokens": 1050000,
           "input_token_limit": 1050000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -1968,8 +2279,17 @@
           "max_input_tokens": null,
           "input_token_limit": null,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2007,8 +2327,17 @@
           "input_token_limit": 256000,
           "max_output_tokens": 64000,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2046,8 +2375,17 @@
           "input_token_limit": 200000,
           "max_output_tokens": 32768,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2085,8 +2423,17 @@
           "input_token_limit": 1048576,
           "max_output_tokens": 131072,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2124,8 +2471,17 @@
           "input_token_limit": 262144,
           "max_output_tokens": 262144,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2163,8 +2519,17 @@
           "input_token_limit": 262144,
           "max_output_tokens": 65536,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2202,8 +2567,17 @@
           "input_token_limit": 1000000,
           "max_output_tokens": 128000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2241,8 +2615,17 @@
           "input_token_limit": 1048576,
           "max_output_tokens": 128000,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2280,8 +2663,17 @@
           "input_token_limit": 1000000,
           "max_output_tokens": 131072,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2319,8 +2711,17 @@
           "input_token_limit": 204800,
           "max_output_tokens": 131072,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2358,8 +2759,17 @@
           "input_token_limit": 1000000,
           "max_output_tokens": 65536,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2397,8 +2807,17 @@
           "input_token_limit": 128000,
           "max_output_tokens": 65536,
           "supports1m": false,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2436,8 +2855,17 @@
           "input_token_limit": 1000000,
           "max_output_tokens": 65536,
           "supports1m": true,
-          "supports_effort_levels": ["low", "medium", "high", "max"],
-          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "supports_effort_levels": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ],
+          "endpoint_types": [
+            "messages",
+            "chat.completions",
+            "responses"
+          ],
           "variants": {
             "low": {
               "output_config": {
@@ -2556,4 +2984,20 @@
     "~/.config/opencode/prompts/dev-team-core.md",
   ],
   "default_agent": "build",
+  "mcp": {
+    "jira": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "npx",
+        "-y",
+        "mcp-jira-server"
+      ],
+      "environment": {
+        "JIRA_BASE_URL": "https://jira.telefonica.com.br",
+        "JIRA_PAT": "{env:JIRA_PAT}",
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+      }
+    }
+  }
 }
