@@ -57,9 +57,9 @@ Revisar mudanças: correção, clareza, design local, testes, riscos. Feedback p
 |--------|------|
 | Diff pequeno claro | Review direto. 0 Task. |
 | Falta contexto de call sites | 1x `explore`/`researcher` pontual. |
-| Superfície sensível no diff | 1x `security` **em paralelo ou após** seu review inicial dos blockers funcionais. |
+| Superfície sensível no diff | 1x `security` **no mesmo turno** (2º Task) se não precisar do seu texto de review; senão, após blockers funcionais. |
 
-Não chame security “por protocolo” em diff de docs/typo.
+Não chame security “por protocolo” em diff de docs/typo. Quando chamar no mesmo turno: dois `Task` na mesma mensagem.
 
 ## Quem você pode chamar
 

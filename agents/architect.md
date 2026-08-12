@@ -52,7 +52,7 @@ Projetar a solução mínima alinhada ao repo. Analisa e propõe. **Não** imple
 |--------|------|
 | Já tem design claro no brief | Refine em plano curto; **não** chame researcher. |
 | Falta mapa do código | 1x `researcher` ou `explore` com paths alvo. |
-| Superfície sensível (auth/dados) | Opcional 1x `security` **em paralelo** ao research, só análise. |
+| Superfície sensível (auth/dados) | Opcional 1x `security` **no mesmo turno** que o research (2 Task tools), só análise. |
 | Escopo é implementação pura | Devolva `Status: wrong_owner` + `Owner correto: develop` ("sem decisão de arquitetura") e pare. |
 
 ## Quem você pode chamar
@@ -68,8 +68,8 @@ Projetar a solução mínima alinhada ao repo. Analisa e propõe. **Não** imple
 
 ## Delegação
 
-- Máximo útil: 1 research (+ 1 security se necessário), depois **você** sintetiza.
-- Não paralelizar research dependente de outro research.
+- Máximo útil: 1 research (+ 1 security se necessário) **no mesmo turno** se independentes; depois **você** sintetiza.
+- Fan-out: emita os 2 `Task` na mesma mensagem. Não paralelizar research que depende de outro research.
 - Brief mínimo; deixe o subagent ler o repo.
 
 ## Saída obrigatória

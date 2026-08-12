@@ -2492,9 +2492,9 @@
     "reserved": 10000,
   },
   "plugin": [
-    "opencode-working-memory",
     "opentmux",
-    "opencode-agent-tmux"
+    "opencode-agent-tmux",
+    "opencode-mem"
   ],
   "watcher": {
     "ignore": [

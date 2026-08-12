@@ -59,6 +59,40 @@ Regra por papel, sem ambiguidade:
 | develop / backend / debugger / tester | ≤2 | 0 |
 | architect / researcher / review / security | ≤1 | 0 |
 
+## Fan-out / paralelismo
+OpenCode executa **N `Task` no mesmo turno** em paralelo. Serializar o que é independente desperdiça tempo.
+
+**Independência (pode paralelo):**
+- read-only livre (research/explore/scout/security análise);
+- write só se **paths de escrita disjuntos** e contratos compartilhados estáveis;
+- sem precisar do output do outro slice.
+
+**Dependência (serial / `depends_on`):**
+- develop/backend → tester;
+- architect → develop da mesma feature;
+- debugger root-cause → fix;
+- qualquer write no mesmo path ou no mesmo contrato instável.
+
+**Caps de wave (orchestrator):**
+| Classe | Tasks/wave | Notas |
+|--------|------------|-------|
+| SIMPLE | 1 | sem fan-out |
+| MEDIUM | ≤3 | 1 wave paralelo típico |
+| COMPLEX | ≤4 | vários waves; total nested ≤6 |
+
+Workers (develop/backend/debugger/tester): fan-out agressivo **não** é papel deles; nested só para lacuna real. Architect/review/security: no máx 2 Task no mesmo turno se independentes (ex.: research ∥ security).
+
+**Mecânica:** um turno = um wave. Emita todos os `Task` do wave na **mesma mensagem**. Só abra o próximo wave após validar o anterior. Não “acompanhar” com Tasks sequenciais o que já era independente.
+
+**Brief (campos extras quando houver wave):**
+```yaml
+wave: 1
+parallel_group: research-map   # ou omitir se serial
+depends_on: []                 # task_ids do wave anterior, se houver
+```
+
+NÃO: fan-out em tarefa acoplada; paralelo develop∥tester; vários writers no mesmo arquivo; Tasks seriais em turnos só para “ver melhor”.
+
 ## Política de retry (valor único)
 - Erro recuperável ou saída inválida: **≤1 retry** com fato novo (subagent, tool call, comando).
 - Orchestrator re-delegando ao mesmo agent: **≤2**, sempre com fato novo no brief.
