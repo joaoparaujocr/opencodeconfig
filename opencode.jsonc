@@ -1955,8 +1955,8 @@
             },
           },
         },
-        "omni/x-ai-grok-4-5": {
-          "id": "combo-grok-4.5",
+        "omni/x-ai-grok-4-6": {
+          "id": "combo-grok-4.6",
           "object": "model",
           "created": 1785085740,
           "owned_by": "combo",
