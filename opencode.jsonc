@@ -762,8 +762,8 @@
             },
           },
         },
-        "devworld/grok-4.5-t": {
-          "id": "devworld/grok-4.5-t",
+        "devworld/grok-4.6-t": {
+          "id": "devworld/grok-4.6-t",
           "object": "model",
           "created": 1735689600,
           "owned_by": "devworld",
