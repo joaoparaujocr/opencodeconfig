@@ -762,8 +762,8 @@
             },
           },
         },
-        "devworld/grok-4.5-t": {
-          "id": "devworld/grok-4.5-t",
+        "devworld/grok-4.6-t": {
+          "id": "devworld/grok-4.6-t",
           "object": "model",
           "created": 1735689600,
           "owned_by": "devworld",
@@ -2266,8 +2266,8 @@
             },
           },
         },
-        "omni/x-ai-grok-4-5": {
-          "id": "combo-grok-4.5",
+        "omni/x-ai-grok-4-6": {
+          "id": "combo-grok-4.6",
           "object": "model",
           "created": 1785085740,
           "owned_by": "combo",
