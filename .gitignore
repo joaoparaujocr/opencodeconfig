@@ -8,3 +8,7 @@ bun.lock
 # runtime / machine-local
 opencode-agent-tmux/update-state.json
 plugins/opencode-dw
+
+usage-stats.db
+usage-stats.db-shm
+usage-stats.db-wal
