@@ -102,11 +102,14 @@
    //
    // Examples (the provider name must be one returned by 'opencode providers list'):
    //   Anthropic (OAuth/API key): "opencodeProvider": "anthropic",      "opencodeModel": "claude-haiku-4-5-20251001"
-   //   OpenAI (API key):          "opencodeProvider": "openai",          "opencodeModel": "gpt-4o-mini"
-   //   GitHub Copilot:            "opencodeProvider": "github-copilot",  "opencodeModel": "gpt-4o-mini"
-   //
-    "opencodeProvider": "opencode-go",
-    "opencodeModel": "deepseek-v4-flash",
+    //   OpenAI (API key):          "opencodeProvider": "openai",          "opencodeModel": "gpt-4o-mini"
+    //   GitHub Copilot:            "opencodeProvider": "github-copilot",  "opencodeModel": "gpt-4o-mini"
+    //
+    // opencode-go força thinking e rejeita tool_choice (400). openai/* via
+    // session.prompt falhou com ProviderModelNotFoundError neste runtime.
+    // Fallback oficial do plugin (README): API OpenAI direta.
+    // "opencodeProvider": "openai",
+    // "opencodeModel": "gpt-4o-mini",
 
    // ============================================
    // Auto-Capture Settings
@@ -124,10 +127,9 @@
   // Any service that follows the OpenAI Chat Completions API can use it via custom "memoryApiUrl".
   "memoryProvider": "openai-chat",
   
-  // Manual fallback. Uncomment all 3 lines and replace memoryApiKey before use:
-  // "memoryModel": "gpt-4o-mini",
-  // "memoryApiUrl": "https://api.openai.com/v1",
-  // "memoryApiKey": "sk-...",
+  "memoryModel": "gpt-4o-mini",
+  "memoryApiUrl": "https://api.openai.com/v1",
+  "memoryApiKey": "env://OPENAI_API_KEY",
 
   // API Key Formats:
   // Direct value:        "sk-..."
