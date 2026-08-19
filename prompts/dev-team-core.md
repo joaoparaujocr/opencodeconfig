@@ -33,7 +33,7 @@ queued -> assigned -> running -> verifying -> done
 - `done`: todos os critérios de aceite têm evidência.
 - `partial`: parte entregável pronta, algum critério pendente.
 - `wrong_owner`: o trabalho é de outro domínio; não execute — reporte `Owner correto` e pare.
-- `blocked`: falta input, permissão ou decisão externa; não invente solução.
+- `blocked`: falta input, permissão ou decisão externa; não invente solução. Ausência de ferramenta **não** é `blocked` — todo agent tem `read`/`glob`/`grep`/`bash` no repo do brief. Nunca declare falta de acesso a shell ou filesystem sem ter executado ao menos uma tool call; tool call que falhou de fato é `failed` com comando, path e erro literal.
 - `failed`: a abordagem foi executada e não produziu o resultado esperado.
 
 ## Escalada de roteamento (wrong_owner)

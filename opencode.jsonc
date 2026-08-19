@@ -2043,6 +2043,7 @@
           "max_context_tokens": 200000,
           "max_input_tokens": 1000000,
           "input_token_limit": 1000000,
+          "max_output_tokens": 131072,
           "supports1m": true,
           "supports_effort_levels": [
             "low",
@@ -2985,18 +2986,19 @@
   ],
   "default_agent": "build",
   "mcp": {
-    "jira": {
+    "atlassian": {
       "type": "local",
       "enabled": true,
       "command": [
-        "npx",
-        "-y",
-        "mcp-jira-server"
+        "uvx",
+        "mcp-atlassian@0.23.0"
       ],
       "environment": {
-        "JIRA_BASE_URL": "https://jira.telefonica.com.br",
-        "JIRA_PAT": "{env:JIRA_PAT}",
-        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+        "JIRA_URL": "https://jira.telefonica.com.br",
+        "JIRA_PERSONAL_TOKEN": "{env:JIRA_PAT}",
+        "JIRA_SSL_VERIFY": "false",
+        "JIRA_PROJECTS_FILTER": "P4P619,MT",
+        "TOOLSETS": "default"
       }
     }
   }
