@@ -2550,6 +2550,474 @@
             },
           },
         },
+        "omni/gemini-3.6-flash-high": {
+          "id": "code-gemini-3.6-flash-high",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.6-flash-medium": {
+          "id": "code-gemini-3.6-flash-medium",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.6-flash-low": {
+          "id": "code-gemini-3.6-flash-low",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.1-pro-high": {
+          "id": "code-gemini-3.1-pro-high",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.1-pro-low": {
+          "id": "code-gemini-3.1-pro-low",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.5-flash-high": {
+          "id": "code-gemini-3.5-flash-high",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.5-flash-low": {
+          "id": "code-gemini-3.5-flash-low",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.5-flash-extra-low": {
+          "id": "code-gemini-3.5-flash-extra-low",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-3.1-flash-lite": {
+          "id": "code-gemini-3.1-flash-lite",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-2.5-flash-thinking": {
+          "id": "code-gemini-2.5-flash-thinking",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-2.5-flash": {
+          "id": "code-gemini-2.5-flash",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/gemini-2.5-flash-lite": {
+          "id": "code-gemini-2.5-flash-lite",
+          "object": "model",
+          "created": 1785640449,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-08-02T03:14:09Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 65536,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
       },
     },
   },
