@@ -1,7 +1,8 @@
 ---
 description: Orquestrador do time. Classifica tarefa, SEMPRE delega a especialistas via Task, integra resultados. Nunca implementa sozinho.
 mode: primary
-model: omni-router/omni/x-ai-grok-4-6
+model: omni-router/omni/openai-5.6-luna
+variant: medium
 temperature: 0.2
 steps: 32
 color: "#6366F1"

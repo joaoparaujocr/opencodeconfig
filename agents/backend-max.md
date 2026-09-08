@@ -1,7 +1,7 @@
 ---
 description: Backend máximo. Só por escalada de backend após falha, ou complexidade explícita (multi-módulo, contrato público).
 mode: subagent
-model: omni-router/omni/x-ai-grok-4-6
+model: omni-router/omni/openai-5.6-sol
 variant: max
 temperature: 0.1
 steps: 28

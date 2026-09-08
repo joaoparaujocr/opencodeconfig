@@ -1,7 +1,7 @@
 ---
 description: Desenvolvedor (tier max). Escalada de develop após falha ou sinal explícito de complexidade (multi-módulo, contrato público). Mesmo papel, modelo mais forte.
 mode: subagent
-model: omni-router/omni/x-ai-grok-4-6
+model: omni-router/omni/claude-opus-5
 variant: max
 temperature: 0.15
 steps: 28

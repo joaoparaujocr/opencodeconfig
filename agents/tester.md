@@ -1,7 +1,7 @@
 ---
 description: Tester/QA. Escreve e roda testes, isola falhas de CI. Use quando comportamento muda; não use só para format/docs.
 mode: subagent
-model: omni-router/omni/qwen3.7-plus
+model: omni-router/omni/deepseek-v4-pro
 variant: max
 temperature: 0.1
 steps: 24

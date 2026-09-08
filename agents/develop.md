@@ -1,7 +1,7 @@
 ---
 description: Desenvolvedor. Implementa features, fixes e refactors no código. Diff mínimo. Não redesenha arquitetura nem faz review formal.
 mode: subagent
-model: omni-router/omni/deepseek-v4-pro
+model: omni-router/omni/claude-sonnet-5
 variant: max
 temperature: 0.15
 steps: 56
