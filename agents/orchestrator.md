@@ -1,7 +1,7 @@
 ---
 description: Orquestrador do time. Classifica tarefa, SEMPRE delega a especialistas via Task, integra resultados. Nunca implementa sozinho.
 mode: primary
-model: omni-router/omni/openai-5.6-luna
+model: omni-router/omni/deepseek-v4-flash
 variant: medium
 temperature: 0.2
 steps: 32
