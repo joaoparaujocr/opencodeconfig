@@ -1,7 +1,7 @@
 ---
 description: Debugger. Root cause com evidência e fix mínimo. Use quando causa unclear; não use em bugs óbvios de 1 linha.
 mode: subagent
-model: omni-router/omni/openai-5.6-terra
+model: omni-router/omni/debugger
 variant: max
 temperature: 0.1
 steps: 24

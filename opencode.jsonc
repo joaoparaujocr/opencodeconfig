@@ -3018,6 +3018,396 @@
             },
           },
         },
+        "omni/orchestrator": {
+          "id": "orchestrator",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 384000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/architect": {
+          "id": "architect",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/develop": {
+          "id": "develop",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 384000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/develop-lite": {
+          "id": "develop-lite",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 1000000,
+          "context_window_size": 1000000,
+          "max_context_tokens": 1000000,
+          "max_input_tokens": 1000000,
+          "input_token_limit": 1000000,
+          "max_output_tokens": 384000,
+          "supports1m": true,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/develop-max": {
+          "id": "develop-max",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/debugger": {
+          "id": "debugger",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/researcher": {
+          "id": "researcher",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 384000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/review": {
+          "id": "review",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/security": {
+          "id": "security",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
+        "omni/tester": {
+          "id": "tester",
+          "object": "model",
+          "created": 1789054535,
+          "owned_by": "combo",
+          "type": "model",
+          "created_at": "2026-09-10T15:35:35Z",
+          "context_window": 200000,
+          "context_window_size": 200000,
+          "max_context_tokens": 200000,
+          "max_input_tokens": 200000,
+          "input_token_limit": 200000,
+          "max_output_tokens": 128000,
+          "supports1m": false,
+          "supports_effort_levels": ["low", "medium", "high", "max"],
+          "endpoint_types": ["messages", "chat.completions", "responses"],
+          "variants": {
+            "low": {
+              "output_config": {
+                "effort": "low",
+              },
+            },
+            "medium": {
+              "output_config": {
+                "effort": "medium",
+              },
+            },
+            "high": {
+              "output_config": {
+                "effort": "high",
+              },
+            },
+            "max": {
+              "output_config": {
+                "effort": "max",
+              },
+            },
+          },
+        },
       },
     },
   },
@@ -3044,9 +3434,8 @@
     },
   },
   "compaction": {
-    "auto": true,
-    "prune": true,
-    "reserved": 10000,
+    "auto": false,
+    "prune": false,
   },
   "plugin": ["opentmux", "opencode-agent-tmux", "opencode-mem"],
   "watcher": {
